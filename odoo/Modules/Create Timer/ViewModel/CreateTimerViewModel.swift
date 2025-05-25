@@ -1,0 +1,182 @@
+//
+//  CreateTimerViewModel.swift
+//  odoo
+//
+//  Created by Mekhak Ghapantsyan on 5/25/25.
+//
+
+import Foundation
+
+final class CreateTimerViewModel: CreateTimerViewModeling {
+  
+  @Published var projects: [Project] = [
+    Project(
+        name: "iOS App Development",
+        tasks: [
+            Task(name: "Setup Project",
+                 description: "Initialize the Xcode project and setup dependencies.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 7),
+                 startDate: Date(),
+                 assignedTo: "Alice"),
+            Task(name: "Login Screen",
+                 description: "Design and implement login screen with authentication.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 10),
+                 startDate: Date(),
+                 assignedTo: "Bob"),
+            Task(name: "Home UI",
+                 description: "Create a responsive home screen.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 12),
+                 startDate: Date(),
+                 assignedTo: "Charlie"),
+            Task(name: "Profile Feature",
+                 description: "Add profile viewing and editing features.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 15),
+                 startDate: Date(),
+                 assignedTo: "Alice"),
+            Task(name: "Settings",
+                 description: "Implement app settings and preferences.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 20),
+                 startDate: Date(),
+                 assignedTo: "Bob"),
+            Task(name: "Testing",
+                 description: "Write unit tests and fix bugs.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 25),
+                 startDate: Date(),
+                 assignedTo: "Charlie")
+        ]
+    ),
+    
+    Project(
+        name: "Marketing Website",
+        tasks: [
+            Task(name: "Wireframing",
+                 description: "Design initial wireframes using Figma.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 5),
+                 startDate: Date(),
+                 assignedTo: "Dana"),
+            Task(name: "Landing Page",
+                 description: "Develop landing page with HTML/CSS.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 7),
+                 startDate: Date(),
+                 assignedTo: "Eve"),
+            Task(name: "SEO Optimization",
+                 description: "Add meta tags and optimize for search engines.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 10),
+                 startDate: Date(),
+                 assignedTo: "Frank"),
+            Task(name: "Contact Form",
+                 description: "Create a functional contact form with validation.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 12),
+                 startDate: Date(),
+                 assignedTo: "Dana"),
+            Task(name: "Deploy to Netlify",
+                 description: "Deploy final site to Netlify with custom domain.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 14),
+                 startDate: Date(),
+                 assignedTo: "Eve"),
+            Task(name: "Analytics Integration",
+                 description: "Set up Google Analytics.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 16),
+                 startDate: Date(),
+                 assignedTo: "Frank")
+        ]
+    ),
+    
+    Project(
+        name: "AI Chatbot",
+        tasks: [
+            Task(name: "Model Selection",
+                 description: "Choose the best NLP model for the use case.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 7),
+                 startDate: Date(),
+                 assignedTo: "Grace"),
+            Task(name: "Training Data Prep",
+                 description: "Clean and prepare training data.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 9),
+                 startDate: Date(),
+                 assignedTo: "Heidi"),
+            Task(name: "API Integration",
+                 description: "Expose chatbot as an API.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 11),
+                 startDate: Date(),
+                 assignedTo: "Ivan"),
+            Task(name: "Conversation Flow",
+                 description: "Design a natural conversational flow.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 13),
+                 startDate: Date(),
+                 assignedTo: "Grace"),
+            Task(name: "Feedback System",
+                 description: "Collect user feedback to improve responses.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 15),
+                 startDate: Date(),
+                 assignedTo: "Heidi"),
+            Task(name: "Deployment",
+                 description: "Deploy the chatbot to production.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 17),
+                 startDate: Date(),
+                 assignedTo: "Ivan")
+        ]
+    ),
+    
+    Project(
+        name: "Internal Tool",
+        tasks: [
+            Task(name: "Requirements Gathering",
+                 description: "Meet with stakeholders to gather requirements.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 4),
+                 startDate: Date(),
+                 assignedTo: "Judy"),
+            Task(name: "Database Schema",
+                 description: "Design the PostgreSQL database schema.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 6),
+                 startDate: Date(),
+                 assignedTo: "Ken"),
+            Task(name: "Backend API",
+                 description: "Implement backend API using Node.js.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 9),
+                 startDate: Date(),
+                 assignedTo: "Leo"),
+            Task(name: "Frontend UI",
+                 description: "Develop the frontend using React.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 11),
+                 startDate: Date(),
+                 assignedTo: "Judy"),
+            Task(name: "Authentication",
+                 description: "Add user login/logout functionality.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 13),
+                 startDate: Date(),
+                 assignedTo: "Ken"),
+            Task(name: "Testing & QA",
+                 description: "Perform testing and fix issues.",
+                 spenatTime: 0,
+                 deadline: Date().addingTimeInterval(86400 * 15),
+                 startDate: Date(),
+                 assignedTo: "Leo")
+        ]
+        )
+  ]
+  
+}
